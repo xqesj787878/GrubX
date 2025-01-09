@@ -41,3 +41,45 @@
     tg.close();
   }
 </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrabX</title>
+</head>
+<body>
+  <h1>Welcome to GrabX!</h1>
+  <div id="user-info"></div>
+  
+  <h2>Select Location:</h2>
+  <input type="text" id="location" placeholder="Enter your address">
+  
+  <h2>Select Store:</h2>
+  <select id="store">
+    <option value="store1">Pizza Place</option>
+    <option value="store2">Burger Joint</option>
+    <option value="store3">Sushi Spot</option>
+  </select>
+  
+  <h2>Select Menu Item:</h2>
+  <select id="menu-item">
+    <option value="item1">Pepperoni Pizza - $10</option>
+    <option value="item2">Cheeseburger - $8</option>
+    <option value="item3">California Roll - $12</option>
+  </select>
+  
+  <button onclick="placeOrder()">Place Order</button>
+  
+  <script>
+    function placeOrder() {
+      const location = document.getElementById('location').value;
+      const store = document.getElementById('store').value;
+      const menuItem = document.getElementById('menu-item').value;
+
+      alert(`Order placed:\nLocation: ${location}\nStore: ${store}\nItem: ${menuItem}`);
+    }
+  </script>
+</body>
+</html>
+
