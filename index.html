@@ -21,3 +21,23 @@
 </body>
 
 </html>
+<script>
+  // Initialize Telegram WebApp
+  const tg = window.Telegram.WebApp;
+
+  // Expand the Web App (makes it fullscreen inside Telegram)
+  tg.expand();
+
+  // Send some user details from Telegram to your app
+  document.addEventListener("DOMContentLoaded", () => {
+    const userInfo = tg.initDataUnsafe?.user;
+    if (userInfo) {
+      document.getElementById("user-info").innerText = `Welcome, ${userInfo.first_name}!`;
+    }
+  });
+
+  // Example button to close the app inside Telegram
+  function closeApp() {
+    tg.close();
+  }
+</script>
